@@ -4,8 +4,10 @@ const selectedClassName = "current"
 const presetButtonColors = ["#3aa757", "#e8453c", "#f9bb2d", "#4688f1"]
 
 const handleButtonClick = e => {
+	// get the currently selected button
 	const current = e.target.parentElement.querySelector(`.${selectedClassName}`)
 
+	// there is a current selected element and it's not the button you clicked
 	if (current && current !== e.target) {
 		current.classList.remove(selectedClassName)
 	}
