@@ -13,3 +13,4 @@ i. [Chrome Developers Documentation](https://developer.chrome.com/docs/extension
 - Do not try to do anything `background` related to the DOM in `background.js` as it now uses service worker especially in `manifest_version:3`. If you mistakenly do so and the extension keeps throwing error: i) move all DOM related code to another JS file and use the `<script>` tag to access the code ii) delete the extension and reinstall it.
 - To `executeScript`, use `chrome.scripting.executeScript`, it accepts an object which contains the `tab` you are targeting and the function (`func`) you want to execute
 - To get the current tab, the syntax is: `chrome.tabs.query({activeTab: true, currentWindow:true})`
+- You need to add `scripting` and `activeTab` to your permissions array in the `manifest.json`
