@@ -1,0 +1,22 @@
+{
+  "name": "slackbot-serverless-function",
+  "version": "1.0.0",
+  "private": true,
+  "description": "slackbot-serverless-function",
+  "author": "Aremu Smog",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^4.22.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  }
+}
