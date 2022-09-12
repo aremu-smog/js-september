@@ -33,6 +33,15 @@ const IndexPage = () => {
 			})
 				.then(res => res.json())
 				.then(data => {
+					setContactData(prevData => {
+						return {
+							...prevData,
+							fullname: "",
+							email: "",
+							company: "",
+							message: "",
+						}
+					})
 					setFormState(currentFormState => {
 						return {
 							...currentFormState,
@@ -65,7 +74,7 @@ const IndexPage = () => {
 			<form onSubmit={sendMessageToSlack}>
 				<div>
 					<label style={formLabelStyles} htmlFor='fullname'>
-						Fullname {contactData?.fullname}
+						Fullname
 					</label>
 					<input
 						type='text'
@@ -217,7 +226,7 @@ const badgeStyle = {
 const formLabelStyles = {
 	display: "block",
 	marginTop: "18px",
-	marginBottom: "4px",
+	marginBottom: "8px",
 }
 
 const formInputStyles = {
