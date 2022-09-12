@@ -45,7 +45,9 @@ export default function handler(req, res) {
 					],
 				}),
 			})
-				.then(res => res.json())
+				.then(response => {
+					return response
+				})
 				.then(data => {
 					return res.status(200).json({
 						message: "Your message was delivered",

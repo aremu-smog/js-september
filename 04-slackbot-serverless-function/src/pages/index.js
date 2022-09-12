@@ -42,33 +42,33 @@ const IndexPage = () => {
 			})
 				.then(res => res.json())
 				.then(data => {
-					if (data.error) {
-						setFormState(currentFormState => {
-							return {
-								...currentFormState,
-								status: "ERROR",
-								message: data.error,
-							}
-						})
-					}
-					if (data.message) {
-						setContactData(prevData => {
-							return {
-								...prevData,
-								fullname: "",
-								email: "",
-								company: "",
-								message: "",
-							}
-						})
-						setFormState(currentFormState => {
-							return {
-								...currentFormState,
-								status: "SUCCESS",
-								message: "Someone on our team will get in touch with you soon!",
-							}
-						})
-					}
+					// if (data.error) {
+					// 	setFormState(currentFormState => {
+					// 		return {
+					// 			...currentFormState,
+					// 			status: "ERROR",
+					// 			message: data.error,
+					// 		}
+					// 	})
+					// }
+					// if (data.message) {
+					setContactData(prevData => {
+						return {
+							...prevData,
+							fullname: "",
+							email: "",
+							company: "",
+							message: "",
+						}
+					})
+					setFormState(currentFormState => {
+						return {
+							...currentFormState,
+							status: "SUCCESS",
+							message: "Someone on our team will get in touch with you soon!",
+						}
+					})
+					// }
 				})
 				.catch(e => {
 					setFormState(currentFormState => {
