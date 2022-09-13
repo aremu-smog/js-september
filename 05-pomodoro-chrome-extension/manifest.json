@@ -1,0 +1,9 @@
+{
+	"name": "Pomodoro Clock",
+	"description": "Live a healthy life",
+	"version": "1",
+	"manifest_version": 3,
+	"action": {
+		"default_popup": "popup.html"
+	}
+}
