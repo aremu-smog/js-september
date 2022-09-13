@@ -3,6 +3,10 @@
 	"description": "Live a healthy life",
 	"version": "1",
 	"manifest_version": 3,
+	"background": {
+		"service_worker": "alarm.js"
+	},
+	"permissions": ["alarms", "tts"],
 	"action": {
 		"default_popup": "popup.html"
 	}
