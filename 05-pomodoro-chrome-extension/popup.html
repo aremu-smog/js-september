@@ -14,7 +14,9 @@
 					id="workTime"
 					type="number"
 					max="90"
-					min="5"
+					value="1"
+					min="1"
+					required
 				/>
 			</div>
 			<div class="form__group">
@@ -24,12 +26,15 @@
 					id="breakTime"
 					type="number"
 					max="30"
+					value="1"
 					min="1"
+					required
 				/>
 			</div>
 
 			<button>Take your life serious</button>
 		</form>
+		<button id="resetButton">Reset</button>
 		<script type="text/javascript" src="./pomodoro.js"></script>
 	</body>
 </html>
