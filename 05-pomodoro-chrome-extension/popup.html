@@ -4,7 +4,17 @@
 		<link rel="stylesheet" href="./main.css" />
 	</head>
 	<body>
-		<h3>Pomodoro Clock</h3>
+		<header class="header">
+			<h3 class="header__text">Pomodoro Clock</h3>
+			<nav class="header__nav">
+				<button class="button__icon">
+					<img src="./assets/notification.svg" alt="Notification" />
+				</button>
+				<button class="button__icon">
+					<img src="./assets/menu.svg" alt="Menu" />
+				</button>
+			</nav>
+		</header>
 
 		<form id="pomodoro">
 			<div class="form__group">
@@ -32,9 +42,26 @@
 				/>
 			</div>
 
-			<button>Take your life serious</button>
+			<div class="form__group--icon">
+				<label class="form__label--icon" for="voice">
+					<img src="./assets/voice.svg" />
+				</label>
+				<select class="form__input" id="voice">
+					<option>American Male</option>
+					<option>American Female</option>
+					<option>Agbero</option>
+				</select>
+			</div>
+
+			<input
+				type="submit"
+				value="Take your Life serious"
+				class="form__input--submit"
+			/>
 		</form>
-		<button id="resetButton">Reset</button>
+		<footer>
+			<button id="resetButton" class="button__secondary">Reset</button>
+		</footer>
 		<script type="text/javascript" src="./pomodoro.js"></script>
 	</body>
 </html>
