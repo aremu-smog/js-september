@@ -8,45 +8,49 @@
 			<h3 class="header__text">Pomodoro Clock</h3>
 			<nav class="header__nav">
 				<button class="button__icon">
-					<img src="./assets/notification.svg" alt="Notification" />
+					<img src="./assets/icons/notification.svg" alt="Notification" />
 				</button>
 				<button class="button__icon">
-					<img src="./assets/menu.svg" alt="Menu" />
+					<img src="./assets/icons/menu.svg" alt="Menu" />
 				</button>
 			</nav>
 		</header>
 
 		<form id="pomodoro">
 			<div class="form__group">
-				<label class="form__label" for="workTime">Work time</label>
+				<label class="form__label" for="workTime">Work time (in minutes)</label>
 				<input
 					class="form__input"
 					id="workTime"
 					type="number"
 					max="90"
-					value="1"
-					min="1"
+					min="15"
+					step="5"
 					required
+					placeholder="e.g 15"
 				/>
 			</div>
 			<div class="form__group">
-				<label class="form__label" for="breakTime">Break time</label>
+				<label class="form__label" for="breakTime"
+					>Break time (in minutes)</label
+				>
 				<input
 					class="form__input"
 					id="breakTime"
 					type="number"
 					max="30"
-					value="1"
-					min="1"
+					min="5"
 					required
+					placeholder="e.g 5"
 				/>
 			</div>
 
 			<div class="form__group--icon">
 				<label class="form__label--icon" for="voice">
-					<img src="./assets/voice.svg" />
+					<img src="./assets/icons/voice.svg" alt="Voice" />
 				</label>
-				<select class="form__input" id="voice">
+				<select class="form__input" id="voice" aria-placeholder="Set a voice">
+					<option value=" ">Select a voice</option>
 					<option>American Male</option>
 					<option>American Female</option>
 					<option>Agbero</option>
@@ -57,6 +61,7 @@
 				type="submit"
 				value="Take your Life serious"
 				class="form__input--submit"
+				id="submitButton"
 			/>
 		</form>
 		<footer>
