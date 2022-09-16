@@ -6,7 +6,7 @@
 	"background": {
 		"service_worker": "alarm.js"
 	},
-	"permissions": ["alarms", "tts"],
+	"permissions": ["alarms", "tts", "storage"],
 	"action": {
 		"default_popup": "popup.html"
 	}
