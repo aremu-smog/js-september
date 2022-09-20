@@ -1,13 +1,25 @@
 {
 	"name": "Pomodoro Clock",
-	"description": "Live a healthy life",
-	"version": "1",
+	"description": "Work, rest, work, rest. Focusing can be hard.",
+	"version": "1.0.0",
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "alarm.js"
 	},
 	"permissions": ["alarms", "tts", "storage"],
 	"action": {
-		"default_popup": "popup.html"
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "/assets/icons/app/pomodoro_16.png",
+			"32": "/assets/icons/app/pomodoro_32.png",
+			"48": "/assets/icons/app/pomodoro_48.png",
+			"128": "/assets/icons/app/pomodoro_128.png"
+		}
+	},
+	"icons": {
+		"16": "/assets/icons/app/pomodoro_16.png",
+		"32": "/assets/icons/app/pomodoro_32.png",
+		"48": "/assets/icons/app/pomodoro_48.png",
+		"128": "/assets/icons/app/pomodoro_128.png"
 	}
 }
